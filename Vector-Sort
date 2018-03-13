@@ -1,0 +1,49 @@
+/*
+***********************************************************
+***********************************************************
+
+NAME-BHONESH CHAWLA
+REGNO-20164017
+BATCH-CS-1
+CONTACT-+918619127663
+EMAIL-rajachawla778@gmail.com
+***********************************************************
+***********************************************************
+*/
+#include<bits/stdc++.h>
+#define pf printf
+#define sf scanf
+#define z long long int
+using namespace std ;
+
+
+
+int main()
+{
+		int n,i;
+		sf("%d",&n);
+		vector <int>v;
+
+		for(i=0;i<n;i++)
+			{
+				int q;
+				sf("%d",&q);
+				v.push_back(q);
+
+				}
+
+		vector<int> :: iterator it;
+
+		sort(v.begin(),v.end());
+
+	
+		for(it=v.begin();it!= v.end();++it)
+		{
+				pf("%d ",*it);
+		}
+
+    
+
+                            return 0;
+                        }
+
