@@ -1,0 +1,35 @@
+/*
+***********************************************************
+***********************************************************
+
+NAME-BHONESH CHAWLA
+REGNO-20164017
+BATCH-CS-1
+CONTACT-+918619127663
+EMAIL-rajachawla778@gmail.com
+***********************************************************
+***********************************************************
+*/
+#include<bits/stdc++.h>
+#define sf scanf
+#define pf printf
+using namespace std;
+int main()
+{
+	 int t, n,ans;
+    sf("%d", &t);
+    while(t--)
+    {
+        sf("%d", &n);
+        if(n%4 == 1)
+            ans = 2;
+        if(n%4 == 2)
+            ans = 4;
+        if(n%4 == 3)
+            ans = 2;
+        if(n%4==0)
+            ans = 3;
+        pf("%d\n",ans);
+    }
+	return 0;
+}

@@ -1,0 +1,27 @@
+#include<bits/stdc++.h>
+#define pf printf
+#define sf scanf
+#define z long long int 
+using namespace std; 
+
+int main()
+{	
+   z t;
+    sf("%lld",&t);
+    while(t--)
+    {
+        z e=2,o=1,te,s=0,n; 
+        sf("%lld",&n);  
+        while(e<=n)
+        {   s+=e;
+            te=e;
+            e=3*e+2*o;
+
+            o=2*te+o;
+
+        }
+        pf("%lld\n",s);
+    }
+
+}
+

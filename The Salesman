@@ -1,0 +1,18 @@
+#include<bits/stdc++.h>
+#define pf printf
+#define sf scanf
+using namespace std;
+int main()
+{   int t;
+    sf("%d",&t);
+    while(t--)
+    {
+    int n,i;
+    sf("%d",&n);
+    int a[n];
+    for(i=0;i<n;i++)
+        sf("%d",&a[i]);
+    sort(a, a+n);
+    pf("%d\n",abs(a[n-1]-a[0]) );
+    }
+}

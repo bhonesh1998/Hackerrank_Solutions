@@ -1,0 +1,28 @@
+/*
+***********************************************************
+***********************************************************
+
+NAME-BHONESH CHAWLA
+REGNO-20164017
+BATCH-CS-1
+CONTACT-+918619127663
+EMAIL-rajachawla778@gmail.com
+***********************************************************
+***********************************************************
+*/
+
+#include<bits/stdc++.h>
+#define pf printf
+#define sf scanf
+#define z long long int
+using namespace std ;
+int main()
+{
+	
+	z a,b;
+	sf("%lld %lld",&b,&a);
+	pf("%lld",(z)ceil( (a*2 )/(double)b));
+
+	return 0;
+} 
+

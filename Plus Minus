@@ -1,0 +1,35 @@
+#include <math.h>
+#include <stdio.h>
+#include <string.h>
+#include <stdlib.h>
+#include <assert.h>
+#include <limits.h>
+#include <stdbool.h>
+
+int main(){
+      double j,k,l;j=k=l=0;
+    int n,i;
+    float q,w,e;
+    scanf("%d",&n);
+    int a[n];
+
+  for(i=0;i<n;i++)
+  {
+      scanf("%d",&a[i]);
+  }
+  for(i=0;i<n;i++)
+ {if(a[i]>0)
+    j++;
+else if(a[i]<0)
+    k++;
+else if(a[i]==0)
+   l++;
+ }
+    q=j/n;w=k/n;e=l/n;
+  
+  printf("%f\n",q);
+  printf("%f\n",w);
+  printf("%f",e);
+    return 0;
+}
+

@@ -1,0 +1,45 @@
+/*
+***********************************************************
+***********************************************************
+
+NAME-BHONESH CHAWLA
+REGNO-20164017
+BATCH-CS-1
+CONTACT-+918619127663
+EMAIL-rajachawla778@gmail.com
+***********************************************************
+***********************************************************
+*/
+#include<bits/stdc++.h>
+#define pf printf
+#define sf scanf
+#define z long long int
+using namespace std ;
+
+
+
+int main()
+{
+
+	int t;
+	sf("%d",&t);
+
+	while(t--)
+	{
+
+
+	int m;
+	sf("%d",&m);
+
+
+	if(m<38)
+		pf("%d\n",m);
+	else if(  ((int)ceil((double)m/5)*5 - m) < 3  )
+		pf("%d\n",((int)ceil((double)m/5))*5);
+	else
+		pf("%d\n",m);
+
+	}
+
+	
+}

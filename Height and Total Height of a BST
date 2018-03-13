@@ -1,0 +1,113 @@
+#include<bits/stdc++.h>
+#define pf printf
+#define sf scanf
+#define mod 1000000007
+#define z long long int 
+using namespace std;
+int co =0;
+
+struct node {
+	int data;
+	struct node *lchild;
+	struct node *rchild;
+	};
+
+
+struct node *create_tree(struct node *root,int data){
+	struct node *ptr=root,*preptr;
+	preptr=root;
+	while(ptr!=NULL){
+		preptr=ptr;
+		if(ptr->data > data)
+			ptr=ptr->lchild;
+		else
+			ptr=ptr->rchild;}
+	
+	struct node *newnode=(struct node *)malloc(sizeof(struct node));
+	newnode->data=data;
+	newnode->lchild=NULL;
+	newnode->rchild=NULL;
+	if(preptr==NULL)
+	 root=newnode;
+	else if(preptr->data > newnode->data)
+		preptr->lchild=newnode;
+	else
+		preptr->rchild=newnode;
+return root;
+}
+
+
+int maxDepth(struct node* node) 
+{
+   if (node==NULL) 
+       return 0;
+   else
+   {
+
+       int lDepth = maxDepth(node->lchild);
+       int rDepth = maxDepth(node->rchild);
+       if (lDepth > rDepth) 
+           return(lDepth+1);
+       else return(rDepth+1);
+   }
+} 
+
+void inorder(struct node* node)
+{
+
+	if(node!=NULL)
+	{
+
+		
+
+		co = co + maxDepth(node)-1;
+		inorder(node->lchild);
+		
+
+		inorder(node->rchild);
+		
+
+	}
+
+
+}
+
+
+int main()
+{
+
+struct node *root=NULL;
+	int i,n,j,k;
+	sf("%d",&n);
+	int arr[n];
+	for(i=0;i<n;i++)
+		sf("%d",&arr[i]);
+
+	 for (i = 0; i < n; i++) {
+      for (j = i + 1; j < n;) {
+         if (arr[j] == arr[i]) {
+            for (k = j; k < n; k++) {
+               arr[k] = arr[k + 1];
+            }
+            n--;
+         } else
+            j++;
+      }
+   }
+
+	for(int i=0;i<n;i++){
+		root=create_tree(root,arr[i]);
+	}
+
+	
+	pf("%d\n",maxDepth(root)-1);
+	inorder(root);
+	pf("%d\n",co);
+
+	
+
+	
+
+	return 0;
+}
+

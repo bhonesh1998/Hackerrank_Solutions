@@ -1,0 +1,18 @@
+#include <bits/stdc++.h>
+#define pf printf
+#define sf scanf
+#define lli long long int
+using namespace std;
+int main()
+{
+	lli t;
+	sf("%lld",&t);
+	while(t--)
+	{
+	lli n;
+	sf("%lld",&n);
+	lli a = ( n*(n-1)*(n+1)*(3*n+2)  )/12;
+	pf("%lld\n",a);
+	}
+}
+

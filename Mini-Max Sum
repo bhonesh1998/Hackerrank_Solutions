@@ -1,0 +1,37 @@
+#include <math.h>
+#include <stdio.h>
+#include <string.h>
+#include <stdlib.h>
+#include <assert.h>
+#include <limits.h>
+#include <stdbool.h>
+
+int main(){
+    long long int s1,s2,s3,s4,s5,i,max,min;
+    long long int a; 
+    long long int b; 
+    long  long int c; 
+    long long int d;
+    long long int e;
+    scanf("%lld %lld %lld %lld %lld",&a,&b,&c,&d,&e);
+    	
+	s1=b+c+d+e;
+	s2=a+c+d+e;
+	s3=b+a+d+e;
+	s4=b+c+a+e;
+	s5=b+c+d+a;
+long long int x[5]={s1,s2,s3,s4,s5};
+	max=x[0];
+	min=x[1];
+	for(i=0;i<5;i++)
+	{ 
+		if(x[i]>max)
+		max=x[i];
+		if(x[i]<min)
+		min=x[i];
+		
+	}
+	printf("%lld %lld",min,max);
+    return 0;
+}
+

@@ -1,0 +1,4 @@
+n = int(raw_input())
+for i in range (0,n):
+    t = int(raw_input())
+    print ((2**t)-1)%100000

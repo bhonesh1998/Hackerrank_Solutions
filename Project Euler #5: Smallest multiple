@@ -1,0 +1,19 @@
+#include <bits/stdc++.h>
+#define pf printf
+#define sf scanf
+#define lli long long int
+using namespace std;
+int main()
+{
+	lli t;
+	sf("%lld",&t);
+	while(t--)
+	{
+	lli n,i,p=1;
+	sf("%lld",&n);
+	for(i=1;i<=n;i++)
+		p=(p*i)/(__gcd(p,i));	
+	pf("%lld\n",p);
+	}
+}
+

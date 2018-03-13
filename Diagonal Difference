@@ -1,0 +1,27 @@
+#include <math.h>
+#include <stdio.h>
+#include <string.h>
+#include <stdlib.h>
+#include <assert.h>
+#include <limits.h>
+#include <stdbool.h>
+
+int main(){
+    int n,i,j,c,d,p=0,f=0;
+    scanf("%d",&n);
+    int a[n+1][n+1];
+    for(i=1;i<=n;i++)
+        for(j=1;j<=n;j++)
+      scanf("%d",&a[i][j]);
+for(i=1;i<=n;i++)
+        {f=f+a[i][i];
+    p=p+a[i][n+1-i];}
+c=f-p;
+    if(c>0)
+        {printf("%d",c);}
+    else
+        {d=-c;
+printf("%d",d);}
+    return 0;
+}
+

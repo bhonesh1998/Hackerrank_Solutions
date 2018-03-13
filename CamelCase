@@ -1,0 +1,29 @@
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+       int c=0;
+		Scanner s=new Scanner(System.in);
+String p=s.next();
+for(int i=0;i<p.length();i++)
+{
+	int x=p.codePointAt(i);
+		if(x>=65&&x<=90)
+{
+	c++;
+}
+
+}
+int d=c+1;
+System.out.print(d);
+
+
+	
+    }
+}
+

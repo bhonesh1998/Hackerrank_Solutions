@@ -1,0 +1,48 @@
+#include<bits/stdc++.h>
+#define pf printf
+#define sf scanf
+#define mod 1000000007
+#define z long long int
+using namespace std;
+string s,k;
+int s1=0;
+
+z sol(string s)
+{
+		int i=0;
+		s1=0;
+				while(s[i]!='\0')
+		{
+
+			if(s1>9)
+				s1-=9;
+			s1=s1+(s[i]-48);
+			//pf("%d",s1);
+			i++;
+		}
+		if(s1>9)
+			s1-=9;
+		return s1;
+
+}
+
+int main()
+
+{		
+		  int i;
+		 cin>>s>>k;
+		 z x = sol(s);
+		 z y = sol(k);
+
+    	z a = x*y;
+
+    	 a = a%10 + a/10 ;
+
+    	 if(a>9)
+    	 	a-=9;
+    	pf("%lld",a);
+
+    	
+
+	return 0;
+}

@@ -1,0 +1,58 @@
+#include<bits/stdc++.h>
+#define pf printf
+#define sf scanf
+#define z long long int 
+using namespace std; 
+
+
+void s(z no)
+{ 
+	z n = 190000;
+	bool a[n+1];
+	z k=0,b[no]={0};
+	memset(a,true,n+1);
+	z p,i;
+	for(p=2;p*p<=n;p++)
+	{
+		if(a[p]==true)
+		{
+			for(i=2*p;i<=n;i+=p)
+				a[i]=false;
+		}
+	}
+
+	for(p=2;p<=n;p++)
+	{
+		if(a[p]==true)
+			{
+				b[k]=p;
+				k++;
+			}
+	}
+
+	pf("%lld\n",b[no-1]);
+	/*
+for(p=0;p<k;p++)
+	{
+		pf("%lld\n",b[p]);
+		
+		}*/
+
+
+}
+
+
+int main()
+{
+	z t;
+	sf("%lld",&t);
+	while(t--)
+	{
+	z f ;
+	sf("%lld",&f);
+	
+	s(f);
+}
+		
+
+}

@@ -1,0 +1,26 @@
+#include<bits/stdc++.h>
+#define pf printf
+#define sf scanf
+#define mod 1000000007
+#define z long long int
+
+using namespace std;
+
+int main()
+
+{
+	int i;
+	int h[1001]={0};
+	int n,c;
+	sf("%d %d",&n,&c);
+
+	int a[n];
+	for(i=0;i<n;i++)
+		{sf("%d",&a[i]); h[a[i]]++;}
+	for(i=0;i<c;i++)
+		{pf("%d ",h[i]);
+}
+
+
+	return 0;
+}

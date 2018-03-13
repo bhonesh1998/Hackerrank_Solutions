@@ -1,0 +1,17 @@
+#include<bits/stdc++.h>
+#define pf printf
+#define sf scanf
+#define mod 1234567
+#define z long long int 
+using namespace std;
+
+ 
+ 
+int main()
+{
+ 
+ z n,m;
+ sf("%lld %lld",&n,&m);
+ pf("%lld",n*m-1);
+ 
+    }

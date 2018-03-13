@@ -1,0 +1,21 @@
+#include <iostream>
+#include <cstdio>
+using namespace std;
+
+int main() {
+    int a;
+    float b;
+    long c;
+    double d;
+    char e;
+    cin>>a >>c >>e >>b >>d;
+    printf("%d\n",a);
+    printf("%ld\n",c);
+      printf("%c\n",e);
+    printf("%.3f\n",b);
+    printf("%.9lf",d);
+  
+    // Complete the code.
+    return 0;
+}
+

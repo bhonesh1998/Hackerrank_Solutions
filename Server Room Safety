@@ -1,0 +1,58 @@
+#include<bits/stdc++.h>
+#define pf printf
+#define sf scanf
+#define mod 1000000007
+#define z long long int
+
+using namespace std;
+
+int main()
+
+{
+
+	z n,a=1,b=1,i;
+	sf("%lld",&n);
+
+	z p[n],h[n],ar[n];
+	for(i=0;i<n;i++)
+		sf("%lld",&p[i]);
+	for(i=0;i<n;i++)
+		sf("%lld",&h[i]);
+
+		for(i=0;i<n;i++)
+	ar[i]=h[i];
+
+
+	for(i=1;i<n;i++){
+            if(p[i]-p[i-1]>ar[i-1]){
+                a=0;
+                break;
+            }
+            if(ar[i]<ar[i-1]-p[i]+p[i-1]){
+                ar[i]=ar[i-1]-p[i]+p[i-1];
+            }
+        }
+        for(i=n-1;i>0;i--){
+            if(p[i]-p[i-1]>h[i]){
+                b=0;
+                break;
+            }
+            if(h[i-1]<h[i]-p[i]+p[i-1]){
+                h[i-1]=h[i]-p[i]+p[i-1];
+            }
+                
+        }
+
+        if(a&&b) pf("BOTH");
+        else if(a) pf("LEFT");
+        else if(b) pf("RIGHT");
+        else pf("NONE");
+
+
+
+
+
+
+
+	return 0;
+}

@@ -1,0 +1,38 @@
+/*
+***********************************************************
+***********************************************************
+
+NAME-BHONESH CHAWLA
+REGNO-20164017
+BATCH-CS-1
+CONTACT-+918619127663
+EMAIL-rajachawla778@gmail.com
+***********************************************************
+***********************************************************
+*/
+#include<bits/stdc++.h>
+#define pf printf
+#define sf scanf
+#define z long long int
+using namespace std ;
+int main()
+{
+	
+	z n,b;
+	sf("%lld",&n);
+
+	if(n%2!=0)
+	{
+
+		b=(n*n-1)/2;
+		pf("%lld %lld %lld",n,b,b+1);
+	}
+	else
+	{
+			b=(n/2)*(n/2)-1;
+			pf("%lld %lld %lld",n,b,b+2);
+
+	}
+
+
+}

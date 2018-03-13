@@ -1,0 +1,33 @@
+/*
+***********************************************************
+***********************************************************
+
+NAME-BHONESH CHAWLA
+REGNO-20164017
+BATCH-CS-1
+CONTACT-+918619127663
+EMAIL-rajachawla778@gmail.com
+***********************************************************
+***********************************************************
+*/
+
+#include<bits/stdc++.h>
+#define pf printf
+#define sf scanf
+#define z long long int
+using namespace std ;
+int main()
+{
+	
+	int t;
+	sf("%d",&t);
+	while(t--)
+	{
+			int p1,p2,q1,q2;
+			sf("%d %d %d %d",&p1,&p2,&q1,&q2);
+			pf("%d %d\n",(2*q1-p1),(2*q2-p2));
+	}
+
+	return 0;
+} 
+

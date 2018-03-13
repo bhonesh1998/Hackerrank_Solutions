@@ -1,0 +1,31 @@
+# include <stdio.h>
+# include <math.h>
+# include <string.h>
+#define pf printf
+#define sf scanf
+#define mod 1000000007
+#define z long long int 
+
+int main()
+{
+	
+		z t;
+		sf("%lld",&t);
+		while(t--)
+		{
+			z s=0,n,i;
+			sf("%lld",&n);
+			z a[n];
+			for(i=0;i<n;i++)
+				sf("%lld",&a[i]);
+			for(i=0;i<n;i++)
+				s+=a[i];
+			if(s%3==0)
+				pf("Yes\n");
+			else
+				pf("No\n");
+
+
+		}
+
+}

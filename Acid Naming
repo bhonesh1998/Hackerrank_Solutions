@@ -1,0 +1,47 @@
+#include<stdio.h>
+#include<stdlib.h>
+#include<string.h>
+#define pf printf
+#define sf scanf
+
+
+
+int main()
+{
+    
+int t,i;
+sf("%d",&t);
+
+while(t--)
+{
+char st[10000];
+sf("%s",st);
+
+int n =strlen(st);
+for(i=0;i<n;i++)
+{
+    if(st[i]=='h'&&st[i+1]=='y'&&st[i+2]=='d'&&st[i+3]=='r'&&st[i+4]=='o' && st[n-1]=='c'&&st[n-2]=='i')
+        {pf("non-metal acid\n");break;}
+    else if(st[n-1]=='c'&&st[n-2]=='i')
+        {pf("polyatomic acid\n");break;}
+    else
+        {pf("not an acid\n");break;}
+
+}
+
+}
+
+
+
+
+
+
+
+
+
+
+    return 0;
+}
+
+
+

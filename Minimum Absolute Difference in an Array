@@ -1,0 +1,26 @@
+#include <bits/stdc++.h>
+#define pf printf
+#define sf scanf
+#define lli long long int
+using namespace std;
+
+
+int main()
+{
+
+	int n,k=0,i,j;
+	sf("%d",&n);
+   
+	int a[n];
+	for(i=0;i<n;i++)
+		sf("%d",&a[i]);
+	sort(a,a+n);
+	int ans = abs(a[2]-a[1]);
+	for(i=3;i<n;i++)
+		{
+			if( abs(a[i]-a[i-1]) <ans )
+				ans = abs(a[i]-a[i-1]);
+		}
+
+		pf("%d",ans);
+}
