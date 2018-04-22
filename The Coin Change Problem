@@ -1,0 +1,39 @@
+#include<bits/stdc++.h>
+#define pf printf
+#define sf scanf
+#define mod 1000000007
+#define z long long int
+using namespace std;
+z solve( z S[], z m, z n )
+{
+    z i, j, x, y;
+    z table[n+1][m];
+    for (i=0; i<m; i++)
+        table[0][i] = 1;
+    for (i = 1; i < n+1; i++)
+    {
+        for (j = 0; j < m; j++)
+        {
+            x = (i-S[j] >= 0)? table[i - S[j]][j]: 0;
+            y = (j >= 1)? table[i][j-1]: 0;
+            table[i][j] = x + y;
+        }
+    }
+    return table[n][m-1];
+}
+
+int main()
+{
+    z i, j;
+    
+    z n,s;
+    sf("%lld %lld",&n,&s);
+    z arr[s];
+
+    for(i=0;i<s;i++)
+        sf("%lld",&arr[i]);
+
+    pf("%lld ", solve(arr, s, n));
+    //getchar();
+    return 0;
+}
