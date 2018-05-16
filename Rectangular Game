@@ -1,0 +1,25 @@
+#include<bits/stdc++.h>
+#define pf printf
+#define sf scanf
+#define z long long int 
+
+int main()
+{
+	z n,a,b;
+	sf("%lld",&n);
+	sf("%lld%lld",&a,&b);
+	z min1 = a;
+	z min2= b;
+	n--; 
+	while(n--)
+	{
+		sf("%lld%lld",&a,&b);
+		if(a<min1)
+		min1=a;
+		if(b<min2)
+		min2=b;
+
+	}
+	pf("%lld",  (min2*min1) );
+
+}
