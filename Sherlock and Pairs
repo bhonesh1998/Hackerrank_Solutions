@@ -1,0 +1,34 @@
+#include<bits/stdc++.h>
+#define pf printf
+#define sf scanf
+#define z long long int 
+using namespace std;
+int main()
+{
+	z t,i,ans=0;
+	
+	sf("%lld",&t);
+
+		while(t--)
+	{
+			z h[1000001]={0};
+			z n,ans =0;
+			sf("%lld",&n);
+			z a[n];
+			for(i=0;i<n;i++)
+				{
+						sf("%lld",&a[i]);
+						h[a[i]]++;
+				}
+			for(i=0;i<1000001;i++)
+			{
+					if(h[i]>1)
+						ans+=  (h[i] ) * (h[i]-1)  ;
+
+			}
+
+			pf("%lld\n",ans);
+
+	}
+
+}
