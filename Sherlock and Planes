@@ -1,0 +1,29 @@
+#include<bits/stdc++.h>
+#define pf printf
+#define sf scanf
+using namespace std;
+int main()
+{
+int t,a,b,c,d,e,f,g,h,i,x,y,z,x1,x2,x3,y1,y2,y3,z1,z2,z3,val;
+scanf("%d",&t);
+while(t--)
+{
+scanf("%d%d%d%d%d%d%d%d%d%d%d%d",&x,&y,&z,&x1,&y1,&z1,&x2,&y2,&z2,&x3,&y3,&z3);
+a=x-x1;
+b=y-y1;
+c=z-z1;
+d=x-x2;
+e=y-y2;
+f=z-z2;
+g=x-x3;
+h=y-y3;
+i=z-z3;
+val=a*(e*i-f*h) - b*(d*i-f*g) + c*(d*h-e*g);
+if(val==0)
+printf("YES\n");
+else
+printf("NO\n");
+}
+
+return 0;
+}
