@@ -1,0 +1,39 @@
+#include<bits/stdc++.h>
+#define pf printf
+#define sf scanf
+#define db double 
+#define z long long int 
+using namespace std;
+int main() {
+
+  vector <int > s;
+
+  int q ; sf("%d",&q);
+  int m=-1;
+  while(q--)
+  {
+      int k;
+      sf("%d",&k);
+      if(k==1)
+      {
+          int a ;
+          sf("%d",&a); 
+          s.push_back(a);
+      }
+      else if (k==2)
+      {
+        
+        s.pop_back();
+        
+      }
+      else
+      {
+       //   int m = max_element(s.begin(),s.end());
+          auto it = max_element(std::begin(s), std::end(s));
+          pf("%d\n",*it);
+      }
+  }
+  
+
+
+}
