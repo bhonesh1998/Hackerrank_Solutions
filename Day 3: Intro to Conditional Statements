@@ -1,0 +1,27 @@
+#include<bits/stdc++.h>
+#define pf printf
+#define sf scanf
+#define db double 
+#define z long long int 
+using namespace std;
+
+int main() 
+{ 
+
+    int n;
+    sf("%d",&n);
+    if(n%2==0)
+      {
+          if(n>=2 && n<=5)
+            pf("Not Weird\n");
+          else if(n>=6 && n<=20)
+             pf("Weird\n");
+           else if(n>20)
+             pf("Not Weird\n");
+
+        
+      } 
+      else  pf("Weird\n");
+
+
+    }
