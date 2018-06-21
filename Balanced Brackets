@@ -1,0 +1,50 @@
+#include<bits/stdc++.h>
+#define pf printf
+#define sf scanf
+#define db double 
+#define z long long int 
+using namespace std;
+
+int main() 
+{ 
+
+  int t ;
+  sf("%d",&t);
+  while(t--)
+  {
+
+    int f=0;
+  string s;
+  cin>>s;
+  stack <char> st;
+  int pc=0,poc=0;
+  for(int i=0;i<s.length();i++)
+      {
+
+          if(s[i]=='(' || s[i]=='{' || s[i]=='[')
+            {st.push(s[i]); pc++;}
+          else
+          {
+              poc++;
+              char c;
+              if(!st.empty())
+              c=st.top();
+              //pf("ch %c\n",c);
+              if( ( c=='(' && s[i]==')' ) || ( c=='{' && s[i]=='}' ) || ( c=='[' && s[i]==']') ) 
+              { 
+                if(!st.empty())
+                st.pop();
+                //poc++;
+                } 
+
+          }
+      }
+
+        if(poc==pc && st.size()==0) pf("YES\n"); else pf("NO\n");
+ 
+   }
+
+
+
+        
+ }
