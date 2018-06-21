@@ -1,0 +1,21 @@
+#include<bits/stdc++.h>
+#define pf printf
+#define sf scanf
+#define db double 
+#define z long long int 
+using namespace std;
+
+int main() 
+{ 
+
+    int n;
+    sf("%d",&n);vector<int> v;
+    while(n--)
+    {
+        int a;sf("%d",&a);v.push_back(a);
+    }
+    reverse(v.begin(),v.end());
+    for(auto i=0;i<v.size();i++) pf("%d ",v[i]);
+
+        
+ }
