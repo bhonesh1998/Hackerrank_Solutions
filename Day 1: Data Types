@@ -1,0 +1,21 @@
+    
+    
+    int x;double y; string z;
+    cin>>x;
+        cin>>y;
+    getline(cin >> ws,z);
+    cout << i+x << endl;
+    double  p= y+d;
+    printf("%.1lf\n",p);
+    //cout << p << endl;
+    cout << s+z << endl;
+    // Declare second integer, double, and String variables.
+    
+    // Read and save an integer, double, and String to your variables.
+    
+    // Print the sum of both integer variables on a new line.
+    
+    // Print the sum of the double variables on a new line.
+    
+    // Concatenate and print the String variables on a new line
+    // The 's' variable above should be printed first.
