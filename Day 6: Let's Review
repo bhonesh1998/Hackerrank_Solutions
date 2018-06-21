@@ -1,0 +1,32 @@
+#include<bits/stdc++.h>
+#define pf printf
+#define sf scanf
+#define db double 
+#define z long long int 
+using namespace std;
+
+int main() 
+{ 
+
+    int n,i;
+    sf("%d",&n);
+    while(n--)
+    {
+        string s;
+        cin>>s;
+        for(i=0;i<s.length();i++)
+            if(i%2==0) 
+              pf("%c",s[i]);
+        pf(" ");
+         for(i=0;i<s.length();i++)
+            if(i%2==1) 
+              pf("%c",s[i]);
+
+             pf("\n");
+
+
+
+
+    }
+
+}
