@@ -1,0 +1,43 @@
+#include<bits/stdc++.h>
+#define pf printf
+#define sf scanf
+#define db double 
+#define z long long int 
+using namespace std;
+
+int main() 
+{ 
+
+    int n;
+    sf("%d",&n);
+    set<int> s;
+    while(n--)
+    {
+        int a;
+        sf("%d",&a);
+        if(a==1)
+        {
+             int b;
+          sf("%d",&b);
+            s.insert(b);
+        }
+        else if(a==2)
+        {
+          int b;
+          sf("%d",&b);
+          s.erase(b);
+
+        }
+        else
+        {
+            int b;
+          sf("%d",&b);
+            set <int> :: iterator it ;
+            it=s.find(b);
+            if(it==s.end()) pf("No\n"); else pf("Yes\n");
+ 
+        }
+    }
+    
+        
+ }
