@@ -1,0 +1,47 @@
+#include<bits/stdc++.h>
+#define pf printf
+#define sf scanf
+#define db double 
+#define z long long int 
+using namespace std;
+
+int main() 
+{
+
+      z n,k,i;
+      sf("%lld%lld",&n,&k);
+      vector <z> v;
+      for(i=0;i<n;i++) {z y ; sf("%lld",&y) ; v.push_back(y); }
+        priority_queue <z, vector<z>, greater<z> > pq;
+        for(auto i=0;i<v.size();i++)  pq.push(v[i]);
+
+      
+        z ans =0;
+            while(!pq.empty())  
+            { 
+                   if(pq.size()==1 && pq.top()<k)
+                  {
+                      pf("-1");
+                      break;
+                  }
+
+                  z q1=pq.top();
+                  pq.pop();
+
+                  
+                  if(q1>=k)
+                      {
+                          pf("%lld",ans);
+                          break;
+                      }
+
+
+                  
+                  z q2= pq.top();pq.pop();
+                  pq.push(q1+2*q2);
+                  ans++;
+
+            }
+
+        
+ }
