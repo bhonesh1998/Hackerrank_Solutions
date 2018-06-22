@@ -1,0 +1,26 @@
+#include<bits/stdc++.h>
+#define pf printf
+#define sf scanf
+#define db double 
+#define z long long int 
+using namespace std;
+
+
+int main() {
+
+
+  z n,m,s=0;
+  sf("%lld%lld",&n,&m);
+  while(m--)
+  {
+      z x,y,z1;
+      sf("%lld%lld%lld",&x,&y,&z1);
+      s+= (y-x+1)*z1;
+  }
+
+    pf("%lld",s/n);
+  
+
+
+  
+}
