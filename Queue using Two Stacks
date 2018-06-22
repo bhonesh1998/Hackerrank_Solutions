@@ -1,0 +1,74 @@
+#include<bits/stdc++.h>
+#define pf printf
+#define sf scanf
+#define db double 
+#define z long long int 
+using namespace std;
+stack <z> s1,s2;
+
+void en(z x)
+{
+      s1.push(x);
+
+}
+
+void de()
+{
+      if(s2.empty())
+        {
+        while(!s1.empty())
+            {
+            s2.push(s1.top());
+            s1.pop();
+        }
+    }
+    s2.pop();    
+}
+z des()
+{
+     if(s2.empty())
+        {
+        while(!s1.empty())
+            {
+            s2.push(s1.top());
+            s1.pop();
+        }
+    }
+    return s2.top();
+
+}
+
+int main() {
+
+
+  z n;
+  sf("%lld",&n);
+  while(n--)
+  { 
+        z op ;
+        sf("%lld",&op);
+
+        if(op==1)
+        {
+            z q1 ;
+          sf("%lld",&q1);          
+          en(q1);
+        }
+        else if(op==2)
+        {
+          de();
+        }
+        else if(op==3)
+        {
+            z ans = des();
+            pf("%d\n",ans);
+        }
+
+
+  }
+
+ 
+
+
+  
+}
