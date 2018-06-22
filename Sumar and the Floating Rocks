@@ -1,0 +1,25 @@
+#include<bits/stdc++.h>
+#define pf printf
+#define sf scanf
+#define db double 
+//#define z long long int 
+using namespace std;
+
+
+int main() {
+
+
+  int n;
+  sf("%d",&n);
+  while(n--)
+  {
+      int a,b,c,d;
+      sf("%d%d%d%d",&a,&b,&c,&d);
+      pf("%d\n",__gcd(abs(a-c),abs(b-d))-1);
+
+  }
+  
+
+
+  
+}
