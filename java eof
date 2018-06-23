@@ -1,0 +1,24 @@
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner s = new Scanner (System.in);
+        //String st = s.next();
+       //string s;
+        int i=1;
+    while(s.hasNextLine())
+    {
+        String st = s.nextLine();
+        System.out.print(i+" ");  
+        //pf("%d ",i);
+        System.out.println(st);
+        //cout <<s<<endl;
+        i++;
+    }
+    }
+}
