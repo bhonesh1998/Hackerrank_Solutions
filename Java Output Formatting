@@ -1,0 +1,35 @@
+import java.util.Scanner;
+
+public class Solution {
+
+     static String wow (int x)
+    {
+             String s = String.valueOf(x);
+            if(s.length()==1)
+                return "00"+s;
+            else if(s.length() == 2)
+                return "0"+s;
+            else
+                return s;
+           
+    }
+    
+    public static void main(String[] args) {
+            Scanner sc=new Scanner(System.in);
+            System.out.println("================================");
+            for(int i=0;i<3;i++){
+                String s1=sc.next();
+                int x=sc.nextInt();
+               // int l = 15 - s1.length();
+                
+                System.out.printf("%-15s%s\n",s1,wow(x)); 
+                //System.out.println(s1++wow(x));
+                //Complete this line
+            }
+            System.out.println("================================");
+
+    }
+}
+
+
+
