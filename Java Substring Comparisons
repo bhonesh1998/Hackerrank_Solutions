@@ -1,0 +1,35 @@
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+
+public class Solution {
+  
+    public static String getSmallestAndLargest(String s, int k) {
+       ArrayList<String> obj = new ArrayList<String>();
+        int n = s.length();
+        int i=0;
+       while(i<=n)
+        {
+            if((i+k)<=n)
+            obj.add(s.substring(i,i+k));
+            i++;
+        }
+     
+        
+        Collections.sort(obj);
+        
+      
+        return obj.get(0)+"\n"+obj.get(n-k);
+    }
+
+    public static void main(String[] args) {
+        Scanner scan = new Scanner(System.in);
+        String s = scan.next();
+        int k = scan.nextInt();
+        scan.close();
+      
+        System.out.println(getSmallestAndLargest(s, k));
+    }
+}
