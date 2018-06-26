@@ -1,0 +1,33 @@
+#include<bits/stdc++.h>
+#define pf printf
+#define sf scanf
+#define db double 
+#define z long long int
+#define mod 2147483648 
+typedef size_t ha;
+using namespace std;
+int main()
+{
+        set <int > se; 
+      ha n,s,p,q,i;
+      cin>>n>>s>>p>>q;
+    vector<bool> a;
+    a.resize(mod);
+    ha val = s%mod;
+    a[val]=true;
+    auto valbc = val;
+    ha count=0;
+    count++;
+    for(ha i=1;i<n;i++){
+        val = (valbc*p+q)%mod;
+        if(a[val]!=true){
+            count++;
+            a[val]=true;
+        }
+        valbc=val;
+    }
+    cout << count ;
+    return 0;
+
+
+}
