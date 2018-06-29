@@ -1,0 +1,43 @@
+#include<bits/stdc++.h>
+#define pf printf
+#define sf scanf
+#define db double 
+#define z long long int 
+using namespace std;
+
+
+
+int main() 
+{
+    
+    int n;
+    sf("%d",&n);
+    int a[n];
+   for (int i = 0; i < n; i++) {sf("%d",&a[i]);} 
+    int numberOfSwaps = 0;
+   for (int i = 0; i < n; i++)
+   {
+    
+    
+    
+    for (int j = 0; j < n - 1; j++) 
+    {
+                if (a[j] > a[j + 1]) 
+                {
+            swap(a[j], a[j + 1]);
+            numberOfSwaps++;
+        }
+    }
+    
+    
+    if (numberOfSwaps == 0) 
+    {
+        break;
+    }
+        
+}
+    pf("Array is sorted in %d swaps.\nFirst Element: %d\nLast Element: %d",numberOfSwaps,a[0],a[n-1]);
+   
+    return 0;
+}
+
