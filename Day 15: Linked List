@@ -1,0 +1,14 @@
+  Node* insert(Node *head,int data)
+      {
+      Node* newnode= new Node (data);
+              if (head==NULL  ){
+              return newnode;
+          }
+         Node* it = head;
+          while (it->next!=NULL){
+              it= it->next;
+          }
+          it->next= newnode;
+          return head;
+          //Complete this method
+      }
