@@ -1,0 +1,19 @@
+public class Solution {
+    
+    Stack < Character  > s = new Stack<Character>();
+    Queue<Character> q = new LinkedList<>();
+    void pushCharacter(char ch) {
+        s.push(ch);
+        
+    }
+    void enqueueCharacter(char ch){
+        q.add(ch);
+    }
+    char popCharacter() {
+        char x = s.peek();
+        s.pop();
+        return x;
+    }
+    char dequeueCharacter() {
+        return q.remove();
+    }
