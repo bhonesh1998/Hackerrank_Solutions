@@ -1,0 +1,39 @@
+#include<bits/stdc++.h>
+#define pf printf
+#define sf scanf
+#define db double 
+#define z long long int 
+using namespace std;
+int main() {
+
+  map < string ,string > m ;
+  int n ;
+  sf("%d",&n);
+  while(n--)
+  {
+      string s,a;
+      cin>>s;cin>>a;
+      m.insert(make_pair(s,a));
+  }
+
+ map < string ,string > :: iterator it ;
+string st ;
+ while(cin>>st)
+ {
+      it = m.find(st);
+      if(it!=m.end())
+      {
+          cout << it->first << "="<<it->second<<endl;
+          
+
+      }
+      else
+      {
+          cout << "Not found"<<endl;
+      }
+ }
+
+  
+
+
+}
