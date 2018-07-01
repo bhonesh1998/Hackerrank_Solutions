@@ -1,0 +1,44 @@
+#include<bits/stdc++.h>
+#define pf printf
+#define sf scanf
+#define db double 
+#define z long long int 
+using namespace std;
+int main() {
+
+  int dr,mr,yr,de,me,ye,f;
+  sf("%d%d%d%d%d%d",&dr,&mr,&yr,&de,&me,&ye);
+  if(yr>ye)
+    {
+      f=10000; 
+    }
+   else if(yr==ye)
+   {  
+          if(mr>me)
+          {
+            f= 500*(mr-me);
+          }
+
+          else if(mr<me)
+                {
+                  f=0;
+                }
+
+
+          else if(mr==me)
+          {
+                if(dr>de)
+                {
+                    f=15*(dr-de);
+                }
+                else if(dr<=de)
+                {
+                  f=0;
+                }
+          }
+   }  
+   else if(yr<ye) f=0;
+
+
+   cout << f;
+}
