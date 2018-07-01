@@ -1,0 +1,32 @@
+#include<bits/stdc++.h>
+#define pf printf
+#define sf scanf
+#define db double 
+#define z long long int 
+using namespace std;
+
+int f(int a )
+{
+    if(a==0) return 1; else return a*f(a-1);
+}
+
+int co (int N,int R)
+{
+    return  ( f(N)/ (f(R)*f(N-R))  ) ;
+
+}
+
+int main() {
+
+
+    int x=3,n=6;
+    double p=0.5215;
+    double q=1-p;
+    double ans=0;
+    for(int i=x;i<=n;i++)
+    {
+        ans += ( (db)co(n,i)*(db)pow(p,i)*(db)pow(q,n-i) );
+    }
+
+    pf("%.3lf",ans);
+}
