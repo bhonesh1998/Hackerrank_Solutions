@@ -1,0 +1,38 @@
+#include<bits/stdc++.h>
+using namespace std;
+#define pf printf
+#define sf scanf
+#define db double 
+#define z long long int 
+
+int main() {
+
+
+   int n,k,i;
+   sf("%d%d",&n,&k);int a[n],b[n];
+   for(i=0;i<n;i++)
+   {
+        sf("%d%d",&a[i],&b[i]);
+   }
+   int ans =0;
+ vector <int> s;
+ for(i=0;i<n;i++)
+   {
+        if(b[i]==1)
+            s.push_back(a[i]);
+        else if(b[i]==0) ans+=a[i];
+   }
+   int y=k;
+   sort(s.begin(),s.end());
+    reverse(s.begin(), s.end() );
+    for (int i = 0; i < min((int)s.size(), k); i++) {
+        ans += s[i];
+    }
+    for (int i = k; i < s.size(); i++) {
+        ans -=s[i];
+    }
+
+cout << ans ;
+
+
+}
