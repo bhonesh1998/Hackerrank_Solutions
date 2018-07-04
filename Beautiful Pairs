@@ -1,0 +1,28 @@
+
+#include<bits/stdc++.h>
+using namespace std;
+#define pf printf
+#define sf scanf
+#define db double 
+#define z long long int 
+
+int v[1010];
+int main()
+{
+    int n,sol=0,x;
+    sf("%d",&n);
+    for(int i=1;i<=n;i++)
+    {
+        sf("%d",&x);
+        v[x]++;
+    }
+    for(int i=1;i<=n;i++)
+    {
+        sf("%d",&x);
+        if(v[x]) {sol++;v[x]--;}
+    }
+    if(sol<n) sol++;
+    else sol--;
+    pf("%d",sol);
+    return 0;
+}
