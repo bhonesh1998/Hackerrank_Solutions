@@ -1,0 +1,35 @@
+#include<bits/stdc++.h>
+#define pf printf
+#define sf scanf
+#define db double 
+#define z long long int 
+using namespace std ;
+int main() 
+{
+    
+    int t;
+    sf("%d",&t);
+    
+    while(t--)
+    {
+        int fl=0;
+int i;
+ int sa;
+ sf("%d",&sa);int a[sa];int s[sa];
+        
+ for(i=0;i<sa;i++) {sf("%d",&a[i]); s[0]=a[0]; if(i!=0){s[i]=s[i-1]+a[i];}}
+  
+        for(i=0;i<sa;i++)
+        {
+                if(s[i]+s[i-1]==s[sa-1])
+                {
+                    fl=1;
+                    break;
+                }
+        }
+        if(fl==1) cout << "YES" << endl; else cout << "NO" << endl;
+    }
+
+
+
+}
