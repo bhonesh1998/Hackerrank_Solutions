@@ -1,0 +1,32 @@
+#include<bits/stdc++.h>
+#define pf printf
+#define sf scanf
+#define db double 
+#define z long long int 
+using namespace std ;
+int main() 
+{
+
+int t;
+sf("%d",&t);
+while(t--)
+{
+int n,m,i,j;
+sf("%d%d",&m,&n); int a[n];
+for(i=0;i<n;i++) sf("%d",&a[i]);
+for(i=0;i<n;i++)
+{
+    for(j=i+1;j<n;j++)
+    {
+            if(a[i]+a[j]==m)
+            {
+                    cout << i+1 <<" "<< j+1 <<endl;
+                    break; 
+            }
+    }
+}
+}
+
+
+
+}
