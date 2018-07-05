@@ -1,0 +1,22 @@
+#include<bits/stdc++.h>
+#define pf printf
+#define sf scanf
+#define db double 
+#define z long long int 
+using namespace std ;
+unordered_set<int> s;
+int main()
+{
+    int n, k, val;
+    sf("%d%d",&n,&k);
+    for (int i = 0; i < n; i++)
+    {
+        sf("%d",&val);
+        s.insert(val);
+    }
+    int c=0;
+    for (unordered_set<int>::iterator it = s.begin(); it != s.end(); ++it)
+        if (s.find(*it + k) != s.end()) c++;
+    cout << c ;
+    return 0;
+}
