@@ -1,0 +1,37 @@
+import java.io.*;
+import java.math.*;
+import java.security.*;
+import java.text.*;
+import java.util.*;
+import java.util.concurrent.*;
+import java.util.regex.*;
+
+public class Solution {
+
+
+
+    private static final Scanner scanner = new Scanner(System.in);
+
+    public static void main(String[] args) {
+        int N = scanner.nextInt();
+        scanner.skip("(\r\n|[\n\r\u2028\u2029\u0085])?");
+        // Set<String> set = new HashSet<String>();
+            Vector<String> set=new Vector <String>();
+        
+        for (int NItr = 0; NItr < N; NItr++) {
+            String s1,s2;
+            s1=scanner.next();
+            s2=scanner.next();
+            if(s2.contains("@gmail.com"))
+                set.add(s1);
+                  
+        }
+      Collections.sort(set);
+        
+        for(int i=0;i<set.size();i++)
+            System.out.println(set.get(i));            
+        
+        
+        scanner.close();
+    }
+}
