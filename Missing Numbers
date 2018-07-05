@@ -1,0 +1,26 @@
+#include<bits/stdc++.h>
+#define pf printf
+#define sf scanf
+#define db double 
+#define z long long int 
+using namespace std ;
+int main() 
+{
+int i;
+    int ha[1000000]={0},hb[1000000]={0};
+ int sa;
+ sf("%d",&sa);int a[sa];
+ for(i=0;i<sa;i++) {sf("%d",&a[i]); ha[a[i]]++;} 
+ int sb;
+ sf("%d",&sb);int b[sb];
+ for(i=0;i<sb;i++) {sf("%d",&b[i]);hb[b[i]]++;} 
+       
+    for(i=0;i<1000000;i++)
+    {
+            if(hb[i]>ha[i])
+                cout << i <<" ";
+    }
+
+
+
+}
