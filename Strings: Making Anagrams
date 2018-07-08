@@ -1,0 +1,26 @@
+#include<bits/stdc++.h>
+#define pf printf
+#define sf scanf
+#define db double 
+#define z long long int 
+using namespace std ;
+
+int main()
+{
+    string a,b;
+    cin>>a;cin>>b;
+    int i,j,ans=0;
+    int ha[26]={0},hb[26]={0};
+    for(i=0;i<a.length();i++) ha[a[i]-'a']++;
+        for(i=0;i<b.length();i++) hb[b[i]-'a']++;
+
+            for(i=0;i<26;i++)
+                {
+                    if(ha[i]>hb[i])
+                    ans += (ha[i]-hb[i]);
+                    else  if(hb[i]>ha[i])
+                        ans += (hb[i]-ha[i]);
+                }
+
+                cout << ans ;
+}
